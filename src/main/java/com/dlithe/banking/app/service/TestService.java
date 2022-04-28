@@ -1,7 +1,7 @@
 package com.dlithe.banking.app.service;
 
 import com.dlithe.banking.app.dto.PatientDetailsRequest;
-import com.dlithe.banking.app.dto.RegisterDetialsRequest;
+import com.dlithe.banking.app.dto.RegisterDetailsRequest;
 import com.dlithe.banking.app.dto.UserDetails;
 import org.springframework.stereotype.Component;
 
@@ -11,7 +11,8 @@ public interface TestService {
 
     String registerPatient(PatientDetailsRequest patientDetailsRequest);
 
-    String registerAgent(RegisterDetialsRequest registerDetailsRequest);
+
+    String registerAgent(RegisterDetailsRequest registerDetailsRequest);
 
     UserDetails getUserDetails(int userId);
 }

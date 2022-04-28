@@ -1,7 +1,7 @@
 package com.dlithe.banking.app.serviceImpl;
 
 import com.dlithe.banking.app.dto.PatientDetailsRequest;
-import com.dlithe.banking.app.dto.RegisterDetialsRequest;
+import com.dlithe.banking.app.dto.RegisterDetailsRequest;
 import com.dlithe.banking.app.dto.UserDetails;
 import com.dlithe.banking.app.entity.User;
 import com.dlithe.banking.app.repository.UserDAO;
@@ -53,10 +53,10 @@ public class TestServiceImpl implements TestService {
 
     }
 
+
+
     @Override
-    public String registerAgent(RegisterDetialsRequest registerDetailsRequest) {
-
-
+    public String registerAgent(RegisterDetailsRequest registerDetailsRequest) {
         User user = new User();
 
         user.setName(registerDetailsRequest.getName());
@@ -65,6 +65,7 @@ public class TestServiceImpl implements TestService {
         userDAO.save(user);
         return "added successfully";
     }
+
 
     @Override
     public UserDetails getUserDetails(int userId) {
