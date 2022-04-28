@@ -1,6 +1,9 @@
 package com.dlithe.banking.app.controller;
 
 import com.dlithe.banking.app.dto.PatientDetailsRequest;
+import com.dlithe.banking.app.dto.RegisterDetialsRequest;
+
+import com.dlithe.banking.app.dto.UserDetails;
 import com.dlithe.banking.app.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -35,5 +38,15 @@ public class TestController {
     public String registerNewPatient(@RequestBody PatientDetailsRequest patientDetailsRequest){
         return testService.registerPatient(patientDetailsRequest);
    }
-
+@PostMapping("register-user")
+public String registerNewAgent(@RequestBody RegisterDetialsRequest registerDetailsRequest){
+    return testService.registerAgent(registerDetailsRequest);
 }
+    @GetMapping("get-user-details/{userId}")
+    public UserDetails fetchUserDetails(@PathVariable int userId){
+        return testService.getUserDetails(userId);
+    }
+}
+
+
+
