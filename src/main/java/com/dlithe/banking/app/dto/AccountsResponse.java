@@ -6,19 +6,17 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+
+
+
 @Getter
 @Setter
-@EqualsAndHashCode
 @ToString
-
-
-
-public class PatientDetailsRequest {
-
+@EqualsAndHashCode
+public class AccountsResponse {
     private String firstName;
     private String lastName;
-    private String mobileNumber;
-    private String disease;
 
+//private List<AccountTypeResponse> accountType;
 
 }

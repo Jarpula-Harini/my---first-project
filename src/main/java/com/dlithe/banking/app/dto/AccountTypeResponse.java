@@ -5,11 +5,13 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@ToString
-@Getter
-@Setter@EqualsAndHashCode
 
-public class UserDetails {
-    private String name;
-    private String age;
+
+@Getter
+@Setter@ToString
+@EqualsAndHashCode
+public class AccountTypeResponse {
+
+    private String accountType;
+    private String accountNumber;
 }
